@@ -4,32 +4,19 @@ import "fmt"
 
 func main() {
 
-	var x, y int
-	var operacao string
+var listaCompras [5]string 
 
-	fmt.Print("Digite o primeiro número: ")
-	fmt.Scanln(&x)
+listaCompras[0] = "Arroz\n"
+listaCompras[1] = "Feijão\n"
+listaCompras[2] = "Macarrão\n"
+listaCompras[3] = "Leite\n"
+listaCompras[4] = "Café\n"
 
-	fmt.Print("Digite o segundo número: ")
-	fmt.Scanln(&y)
+//fmt.Println("Lista de Compras:", listaCompras)
+//fmt.Println("Só o segundo item:", listaCompras[1])
 
-	fmt.Println("Escolha a operação desejada (+, -, *, /): ")
-    fmt.Scanln(&operacao)
-
-	if operacao == "+" {
-		fmt.Printf("Resultado: %d\n", x+y)
-	}  else if operacao == "-" {
-		fmt.Printf("Resultado: %d\n", x-y)
-	} else if operacao == "*" {
-		fmt.Printf("Resultado: %d\n", x*y)
-	} else if operacao == "/" {
-		fmt.Printf("Resultado: %d\n", x/y)
-	} 
-
-
-
-
-
-
+for i := 0; i < len(listaCompras); i++ {
+	fmt.Println("Item", i, ":", listaCompras[i])
+}
 
 }
