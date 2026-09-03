@@ -3,20 +3,29 @@ package main
 import "fmt"
 
 func main() {
+	
+var x, y int
+var operacao string
 
-var listaCompras [5]string 
+fmt.Println("Digite o primeiro número: ")
+fmt.Scan(&x)
+fmt.Println("Digite o segundo número: ")
+fmt.Scan(&y)
 
-listaCompras[0] = "Arroz\n"
-listaCompras[1] = "Feijão\n"
-listaCompras[2] = "Macarrão\n"
-listaCompras[3] = "Leite\n"
-listaCompras[4] = "Café\n"
+fmt.Println("Digite a operação desejada (+, -, *, /): ")
+fmt.Scan(&operacao)
 
-//fmt.Println("Lista de Compras:", listaCompras)
-//fmt.Println("Só o segundo item:", listaCompras[1])
-
-for i := 0; i < len(listaCompras); i++ {
-	fmt.Println("Item", i, ":", listaCompras[i])
+if operacao == "+" {
+	fmt.Println("Resultado:", x+y)
+} else if operacao == "-" {
+	fmt.Println("Resultado:", x-y)
+} else if operacao == "*" {
+	fmt.Println("Resultado:", x*y)
+} else if operacao == "/" {
+	if y != 0 {
+		fmt.Println("Resultado:", x/y)
+	} else {
+		fmt.Println("Erro: Divisão por zero não é permitida.")
+	}
 }
-
 }
